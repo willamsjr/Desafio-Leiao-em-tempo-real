@@ -1,0 +1,591 @@
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #1e293b;
+  background: #f5f7fb;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+}
+
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #152238;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 28px 0 20px;
+}
+
+main>div {
+  background: white;
+  padding: 24px;
+  margin-bottom: 16px;
+  border: 1px solid #e5eaf0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px #172b4d0a;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e5eaf0;
+  margin-top: 20px;
+}
+
+
+
+.lista-leiloes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .lista-leiloes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .lista-leiloes {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.card-leilao {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-leilao h3 {
+  margin: 0 0 18px;
+  color: #1e293b;
+}
+
+.card-leilao p {
+  margin: 8px 0;
+}
+
+.card-leilao button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.cronometro {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.cronometro p {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.cronometro h2 {
+  margin: 0;
+  font-size: 30px;
+  color: #1e40af;
+}
+
+.formulario-lance {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  margin: 24px 0;
+}
+
+.formulario-lance form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.formulario-lance input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.erro-lance {
+  color: #dc2626;
+}
+
+.pagina {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 42px 24px 60px;
+}
+
+.topo {
+  margin-bottom: 28px;
+}
+
+.topo-badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.topo h1 {
+  margin: 0 0 10px;
+  font-size: 38px;
+  color: #0f172a;
+}
+
+.topo-texto {
+  margin: 0;
+  color: #64748b;
+  font-size: 16px;
+  max-width: 680px;
+}
+
+.card-leilao {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-leilao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.10);
+}
+
+.card-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.card-status {
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+.card-id {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+.card-leilao h3 {
+  margin: 0 0 18px;
+  font-size: 23px;
+  color: #0f172a;
+}
+
+.card-preco {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.card-preco small {
+  display: block;
+  font-size: 13px;
+  color: #1d4ed8;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.card-preco strong {
+  font-size: 30px;
+  color: #1e3a8a;
+  line-height: 1.1;
+}
+
+.card-info {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card-info p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #475569;
+}
+
+.card-info span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.card-info strong {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.botao-entrar {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.botao-entrar:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 640px) {
+  .topo h1 {
+    font-size: 30px;
+  }
+
+  .card-preco strong {
+    font-size: 24px;
+  }
+}
+
+
+/* SALA DO LEILÃO */
+
+.sala-leilao {
+  max-width: 780px;
+  margin: 25px auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.sala-leilao h1 {
+  font-size: 30px;
+  color: #0f172a;
+  margin-bottom: 25px;
+}
+
+.sala-leilao>h2 {
+  background: #eff6ff;
+  color: #1e40af;
+  padding: 22px;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  font-size: 27px;
+}
+
+.sala-leilao>p {
+  font-size: 15px;
+  color: #64748b;
+}
+
+.sala-leilao .cronometro {
+  text-align: center;
+  padding: 28px;
+  border-radius: 14px;
+  margin: 25px 0;
+}
+
+.sala-leilao .cronometro h2 {
+  font-size: 34px;
+  margin: 10px 0 0;
+  color: #1e40af;
+}
+
+.sala-leilao .formulario-lance {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.sala-leilao .formulario-lance form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sala-leilao input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+}
+
+.sala-leilao .formulario-lance button {
+  grid-column: 1 / -1;
+  padding: 14px;
+}
+
+.sala-leilao ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sala-leilao li {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+@media (max-width: 600px) {
+  .sala-leilao {
+    padding: 20px;
+  }
+
+  .sala-leilao .formulario-lance form {
+    grid-template-columns: 1fr;
+  }
+
+  .sala-leilao .cronometro h2 {
+    font-size: 24px;
+  }
+}
+
+
+/* AJUSTE GERAL DA PÁGINA */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: block;
+  min-width: 320px;
+  background: #f5f7fb;
+}
+
+#root {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* CENTRALIZAÇÃO DA PÁGINA */
+
+main.pagina {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px 70px;
+}
+
+/* SALA DO LEILÃO */
+
+.sala-leilao {
+  width: 100%;
+  max-width: 920px;
+  margin: 25px auto;
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+/* VALOR ATUAL */
+
+.sala-leilao>h2 {
+  font-size: 30px;
+  padding: 28px;
+  border-radius: 16px;
+}
+
+/* CRONÔMETRO */
+
+.sala-leilao .cronometro {
+  padding: 30px;
+}
+
+.sala-leilao .cronometro h2 {
+  font-size: 38px;
+}
+
+/* FORMULÁRIO */
+
+.sala-leilao .formulario-lance {
+  padding: 28px;
+}
+
+.sala-leilao .formulario-lance form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* HISTÓRICO */
+
+.sala-leilao li {
+  padding: 18px 20px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 640px) {
+  main.pagina {
+    padding: 24px 16px;
+  }
+
+  .sala-leilao {
+    padding: 22px;
+  }
+
+  .sala-leilao>h2 {
+    font-size: 23px;
+    padding: 20px;
+  }
+
+  .sala-leilao .cronometro h2 {
+    font-size: 27px;
+  }
+
+  .sala-leilao .formulario-lance form {
+    grid-template-columns: 1fr;
+  }
+}
+
+main.pagina {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 24px 70px;
+}
+
+.cadastro-leilao {
+  max-width: 500px;
+  margin: 24px 0;
+  background: white;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.cadastro-leilao form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cadastro-leilao input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.cadastro-leilao label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.cadastro-leilao button {
+  margin-top: 10px;
+}
+
+.estado-conexao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ponto-conexao {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.estado-conexao.online {
+  color: #16a34a;
+}
+
+.estado-conexao.offline {
+  color: #d97706;
+}
